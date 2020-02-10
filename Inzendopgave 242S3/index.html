@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="js/opgave-3.js" async></script>
+    <title>Document</title>
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background-color: #f1f0e8;
+        font-family: "Open Sans", sans-serif;
+      }
+      .section-saldo {
+        margin-top: 30px;
+        width: 50%;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      .section-saldo p:nth-of-type(1) {
+        margin-bottom: 50px;
+      }
+
+      .section-saldo p:nth-of-type(1)::after {
+        border-bottom: 1px solid #0000002c;
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 120px;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        text-align: center;
+        margin-top: 18px;
+      }
+
+      input {
+        margin: 5px auto;
+        display: block;
+        text-align: center;
+      }
+
+      #btn {
+        margin: 30px auto;
+        display: block;
+        padding: 10px 25px;
+        background-color: rgb(53, 184, 41);
+        color: white;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        box-shadow: 1px 2px #00000049;
+        text-transform: uppercase;
+      }
+
+      .btn:active {
+        transform: translateY(4px);
+      }
+
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="section-saldo">
+      <h1>
+        Hoe lang duurt het om mijn banksaldo te verdubbelen met de huidige
+        rente?
+      </h1>
+      <p>Voer de gegevens in en check het resultaat</p>
+      <label for="geboortedatum">Vul geboortedatum in:</label>
+      <input id="geboortedatum" type="text" placeholder="dd-mm-jjjj" />
+      <label for="bedrag">Vul een bedrag in:</label>
+      <input id="bedrag" type="text" placeholder="0" />
+      <label for="rentepercentage">Vul rentepercentage in (per jaar):</label>
+      <input id="rentepercentage" type="text" placeholder="%" />
+
+      <button id="btn" class="btn">bereken saldo</button>
+      <p id="uitvoer"></p>
+    </section>
+  </body>
+</html>
